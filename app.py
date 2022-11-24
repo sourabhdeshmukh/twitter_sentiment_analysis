@@ -4,6 +4,8 @@ import pandas as pd
 import re
 from nltk.stem import WordNetLemmatizer
 import streamlit as st
+from pathlib import Path
+import tarfile
 
 consumer_key = st.secrets["consumer_key"]
 consumer_key_secret = st.secrets["consumer_key_secret"]
@@ -119,8 +121,17 @@ def preprocess(textdata):
 def app():
     st.title("Twitter Sentiment Analyzer")
 
+def filesCheck():
+    path = './vectoriser-ngram.pickle'
+    obj = Path(path)
+    if obj.exists() == False:
+        file = tarfile.open('vectoriser.tar.gz')
+        file.extractall('./')
+        file.close()
+        
 
 if __name__=="__main__":
+    filesCheck()
     app()
     # Loading the models.
     # vectoriser, LRmodel = load_models()
