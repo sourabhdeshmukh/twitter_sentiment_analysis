@@ -1,0 +1,11 @@
+re
+pickle
+numpy
+pandas
+tweepy
+seaborn
+wordcloud
+matplotlib
+nltk
+scikit-learn
+
