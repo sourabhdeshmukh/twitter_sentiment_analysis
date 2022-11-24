@@ -6,6 +6,8 @@ from nltk.stem import WordNetLemmatizer
 import streamlit as st
 from pathlib import Path
 import tarfile
+import requests
+from streamlit_lottie import st_lottie
 
 consumer_key = st.secrets["consumer_key"]
 consumer_key_secret = st.secrets["consumer_key_secret"]
@@ -120,6 +122,60 @@ def preprocess(textdata):
 
 def app():
     st.title("Twitter Sentiment Analyzer")
+    
+    def load_lottieurl(url: str):
+        r = requests.get(url)
+        if r.status_code != 200:
+            return None
+        return r.json()
+
+    lottie_twitter = load_lottieurl('https://assets6.lottiefiles.com/packages/lf20_ayl5c9tf.json')
+    st_lottie(lottie_twitter, speed=1, height=180, key="initial")
+
+    st.subheader("Analyze Sentiments on Twitter in Real Time!")
+	
+    st.markdown("Hey there! Welcome to Twitter Sentiment Analysis App. This app scrapes (and never keeps or stores!) the tweets you want to classfiy and analyzes the sentiments as positive, negative or neutral and visualises their distribution.")
+    st.markdown("**To begin, please enter the number of tweets you want to analyse.** 👇")
+
+	
+    notweet = st.slider('Select a number between 1-100')
+    st.write(notweet, 'tweets are being fetched.')
+    st.write("__________________________________________________________________________________")
+
+		# Radio Buttons
+    st.markdown(" Great! Now, let's select the type of search you want to conduct. You can either search a twitter handle (e.g. @elonmusk) which will analyse the recent tweets of that user or search a trending hashtag (e.g. #WorkFromHome) to classify sentiments of the tweets regarding it. ")
+    st.write("")
+
+    stauses = st.radio('Select the mode of fetching',("Fetch the most recent tweets from the given twitter handle","Fetch the most recent tweets from the given twitter hashtag"))
+
+    if stauses == 'Fetch the most recent tweets from the given twitter handle':
+        st.success("Enter User Handle")
+    elif stauses == 'Fetch the most recent tweets from the given twitter hashtag':
+        st.success("Enter Hashtag")
+    else:
+        st.warning("Choose an option")
+    
+    raw_text = st.text_input("Enter the twitter handle of the personality (without @) or enter the hashtag (without #)")
+    need_help = st.expander('Need help? 👉')
+    with need_help:
+        st.markdown("Having trouble finding the Twitter profile or Hashtag? Head to the [Twitter website](https://twitter.com/home) and click on the search bar in the top right corner.")
+        
+    st.markdown(" ### Almost done! Finally, let's choose what we want to do with the tweets ")
+    Analyzer_choice = st.selectbox("Choose the action to be performed 👇",  ["Show Recent Tweets","Classify Sentiment"])
+
+    if st.button("Analyze"):
+        if Analyzer_choice == "Show Recent Tweets":
+            st.success("Fetching latest Tweets")
+            def Show_Recent_Tweets(raw_text):
+                if stauses == 'Fetch the most recent tweets from the given twitter handle': 
+                    posts = [status for status in tw.Cursor(api.user_timeline, screen_name=raw_text).items(notweet)]
+                else:
+                    posts = [status for status in tw.Cursor(api.search, q=raw_text).items(100)]
+                    
+
+
+
+
 
 def filesCheck():
     path = './vectoriser-ngram.pickle'
