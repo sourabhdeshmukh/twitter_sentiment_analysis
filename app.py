@@ -2,10 +2,6 @@ import pickle
 import tweepy as tw 
 import pandas as pd
 import re
-import nltk
-nltk.download('wordnet')
-nltk.download('omw-1.4')
-
 from nltk.stem import WordNetLemmatizer
 import streamlit as st
 from pathlib import Path
@@ -13,6 +9,9 @@ import tarfile
 import requests
 from streamlit_lottie import st_lottie
 import plotly.express as px
+import nltk
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 consumer_key = st.secrets["consumer_key"]
 consumer_key_secret = st.secrets["consumer_key_secret"]
@@ -22,12 +21,6 @@ access_token_secret = st.secrets["access_token_secret"]
 auth = tw.OAuthHandler(consumer_key, consumer_key_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tw.API(auth, wait_on_rate_limit=True)
-
-#tweet_list = []
-#for tweet in api.search_tweets(q="google", lang="en", count=10):
-    #print(tweet.text)
-#    tweet_list.append(tweet.text)
-
     
 def load_models():
     # Load the vectoriser.
@@ -38,7 +31,6 @@ def load_models():
     file = open('Sentiment-LR.pickle', 'rb')
     LRmodel = pickle.load(file)
     file.close()
-    
     return vectoriser, LRmodel
 
 def predict(LRmodel, model, text):
@@ -174,7 +166,7 @@ def app():
                 if stauses == 'Fetch the most recent tweets from the given twitter handle': 
                     posts = [status for status in tw.Cursor(api.user_timeline, screen_name=raw_text).items(notweet)]
                 else:
-                    posts = [status for status in tw.Cursor(api.search, q=raw_text).items(100)]
+                    posts = [status for status in tw.Cursor(api.search_tweets, q=raw_text).items(100)]
                 
                 def get_tweets():
                     tweet_list = []
@@ -195,7 +187,7 @@ def app():
                 if stauses == 'Fetch the most recent tweets from the given twitter handle': 
                     posts = [status for status in tw.Cursor(api.user_timeline, screen_name=raw_text).items(notweet)]
                 else:
-                    posts=[status for status in tw.Cursor(api.search, q=raw_text).items(100)]
+                    posts=[status for status in tw.Cursor(api.search_tweets, q=raw_text).items(100)]
 
                 def fetch_tweets():
                     l2 = []
