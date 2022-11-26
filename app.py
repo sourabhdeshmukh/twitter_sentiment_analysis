@@ -8,23 +8,29 @@ from pathlib import Path
 import tarfile
 import requests
 from streamlit_lottie import st_lottie
+import plotly.express as px
 
-consumer_key = st.secrets["consumer_key"]
-consumer_key_secret = st.secrets["consumer_key_secret"]
-access_token = st.secrets["access_token"]
-access_token_secret = st.secrets["access_token_secret"]
+#consumer_key = st.secrets["consumer_key"]
+#consumer_key_secret = st.secrets["consumer_key_secret"]
+#access_token = st.secrets["access_token"]
+#access_token_secret = st.secrets["access_token_secret"]
+
+consumer_key='hNGyN5zwLa4LIiry6e1gk1hzk'
+consumer_key_secret='uiYDZEXkznIB62LvOROI9ZFRq04bBQtUztntMf4RpwgpMayBkc'
+access_token='1591888512889987073-RCtS6H1kFpvMXZIhcDursT3xN5T0WS'
+access_token_secret='ihtgpb3iXKJcBLtsksCy3pQe81izI0aSbOUvppEFJ0YL3'
 
 auth = tw.OAuthHandler(consumer_key, consumer_key_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tw.API(auth, wait_on_rate_limit=True)
 
-tweet_list = []
-for tweet in api.search_tweets(q="google", lang="en", count=10):
+#tweet_list = []
+#for tweet in api.search_tweets(q="google", lang="en", count=10):
     #print(tweet.text)
-    tweet_list.append(tweet.text)
+#    tweet_list.append(tweet.text)
 
+    
 def load_models():
-  
     # Load the vectoriser.
     file = open('vectoriser-ngram.pickle', 'rb')
     vectoriser = pickle.load(file)
@@ -40,7 +46,6 @@ def predict(LRmodel, model, text):
     # Predict the sentiment
     textdata = LRmodel.transform(preprocess(text))
     sentiment = model.predict(textdata)
-    
     # Make a list of text with sentiment.
     data = []
     for text, pred in zip(text, sentiment):
@@ -171,11 +176,66 @@ def app():
                     posts = [status for status in tw.Cursor(api.user_timeline, screen_name=raw_text).items(notweet)]
                 else:
                     posts = [status for status in tw.Cursor(api.search, q=raw_text).items(100)]
+                
+                def get_tweets():
+                    tweet_list = []
+                    itr = 1
+                    for tweet in posts[:10]:
+                        tweet_list.append(tweet.text)
+                        itr += 1
+                    return tweet_list
+                
+                recent_tweets = get_tweets()
+                return recent_tweets
+            recent_tweets = Show_Recent_Tweets(raw_text)
+            st.write(recent_tweets)
+        else:
+            st.success("Analysing latest tweets")
+            m = []
+            def Analyse_Recent_Tweets(raw_text):
+                if stauses == 'Fetch the most recent tweets from the given twitter handle': 
+                    posts = [status for status in tw.Cursor(api.user_timeline, screen_name=raw_text).items(notweet)]
+                else:
+                    posts=[status for status in tw.Cursor(api.search, q=raw_text).items(100)]
+
+                def fetch_tweets():
+                    l2 = []
+                    for tweet in posts[:notweet]:
+                        l2.append(tweet.text)
+                        #st.write(tweet.text)
                     
+                    df = predict(vectoriser, LRmodel, l2)
 
+                    for i in range(len(df)):
+                        m.append(df.iloc[i]["sentiment"])
+                   
+                    for j in range(0, notweet):
+                        st.write(l2[j])
+                        st.write("The predicted sentiment is", m[j])
+                        st.write("")
+                        st.write("__________________________________________________________________________________")
 
+                rec_tweets = fetch_tweets()
+                return rec_tweets
 
-
+            rec_tweets= Analyse_Recent_Tweets(raw_text)
+            df = pd.DataFrame(m, columns = ['Sentiment'])
+        st.markdown("**Whoa! Those are some strong opinions alright. Outta the {0} tweets that we analysed, the positive, negative and neutral sentiment distribution is summed up in the followed visualisation and table.**".format(notweet)) 
+        st.write("")
+        fig = px.pie(df,names=df['Sentiment'], title ='Pie chart of different sentiments of tweets')
+        st.plotly_chart(fig)
+        pos = df[df['Sentiment'] == 'Positive']
+        neg = df[df['Sentiment'] == 'Negative']
+        total_rows = df.count()
+        rowsp = pos.count()
+        rowsn = neg.count()
+        result = pd.concat([rowsp, rowsn], axis=1)
+        result.columns = ['Positive', 'Negative']
+        result.index = ['No. of Tweets']
+        st.subheader('Sentiment Distribution')
+        st.write(result)
+        st.markdown('***')
+        st.markdown("Thanks for going through this mini-analysis with us. Cheers!")
 
 def filesCheck():
     path = './vectoriser-ngram.pickle'
@@ -188,10 +248,8 @@ def filesCheck():
 
 if __name__=="__main__":
     filesCheck()
-    app()
     # Loading the models.
-    # vectoriser, LRmodel = load_models()
-    #df = predict(vectoriser, LRmodel, tweet_list)
-
- 
+    vectoriser, LRmodel = load_models()
+    app()
+    
     
