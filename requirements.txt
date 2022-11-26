@@ -7,3 +7,4 @@ matplotlib
 nltk
 scikit-learn
 streamlit_lottie
+plotly
