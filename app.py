@@ -10,15 +10,10 @@ import requests
 from streamlit_lottie import st_lottie
 import plotly.express as px
 
-#consumer_key = st.secrets["consumer_key"]
-#consumer_key_secret = st.secrets["consumer_key_secret"]
-#access_token = st.secrets["access_token"]
-#access_token_secret = st.secrets["access_token_secret"]
-
-consumer_key='hNGyN5zwLa4LIiry6e1gk1hzk'
-consumer_key_secret='uiYDZEXkznIB62LvOROI9ZFRq04bBQtUztntMf4RpwgpMayBkc'
-access_token='1591888512889987073-RCtS6H1kFpvMXZIhcDursT3xN5T0WS'
-access_token_secret='ihtgpb3iXKJcBLtsksCy3pQe81izI0aSbOUvppEFJ0YL3'
+consumer_key = st.secrets["consumer_key"]
+consumer_key_secret = st.secrets["consumer_key_secret"]
+access_token = st.secrets["access_token"]
+access_token_secret = st.secrets["access_token_secret"]
 
 auth = tw.OAuthHandler(consumer_key, consumer_key_secret)
 auth.set_access_token(access_token, access_token_secret)
