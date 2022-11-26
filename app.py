@@ -2,6 +2,10 @@ import pickle
 import tweepy as tw 
 import pandas as pd
 import re
+import nltk
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+
 from nltk.stem import WordNetLemmatizer
 import streamlit as st
 from pathlib import Path
