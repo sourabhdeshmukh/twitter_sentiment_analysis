@@ -210,22 +210,22 @@ def app():
 
             rec_tweets= Analyse_Recent_Tweets(raw_text)
             df = pd.DataFrame(m, columns = ['Sentiment'])
-        st.markdown("**Whoa! Those are some strong opinions alright. Outta the {0} tweets that we analysed, the positive, negative and neutral sentiment distribution is summed up in the followed visualisation and table.**".format(notweet)) 
-        st.write("")
-        fig = px.pie(df,names=df['Sentiment'], title ='Pie chart of different sentiments of tweets')
-        st.plotly_chart(fig)
-        pos = df[df['Sentiment'] == 'Positive']
-        neg = df[df['Sentiment'] == 'Negative']
-        total_rows = df.count()
-        rowsp = pos.count()
-        rowsn = neg.count()
-        result = pd.concat([rowsp, rowsn], axis=1)
-        result.columns = ['Positive', 'Negative']
-        result.index = ['No. of Tweets']
-        st.subheader('Sentiment Distribution')
-        st.write(result)
-        st.markdown('***')
-        st.markdown("Thanks for going through this mini-analysis with us. Cheers!")
+            st.markdown("**Whoa! Those are some strong opinions alright. Outta the {0} tweets that we analysed, the positive, negative and neutral sentiment distribution is summed up in the followed visualisation and table.**".format(notweet)) 
+            st.write("")
+            fig = px.pie(df,names=df['Sentiment'], title ='Pie chart of different sentiments of tweets')
+            st.plotly_chart(fig)
+            pos = df[df['Sentiment'] == 'Positive']
+            neg = df[df['Sentiment'] == 'Negative']
+            total_rows = df.count()
+            rowsp = pos.count()
+            rowsn = neg.count()
+            result = pd.concat([rowsp, rowsn], axis=1)
+            result.columns = ['Positive', 'Negative']
+            result.index = ['No. of Tweets']
+            st.subheader('Sentiment Distribution')
+            st.write(result)
+            st.markdown('***')
+            st.markdown("Thanks for going through this mini-analysis with us. Cheers!")
 
 def filesCheck():
     path = './vectoriser-ngram.pickle'
