@@ -133,8 +133,9 @@ def app():
     st.markdown("Hey there! Welcome to Twitter Sentiment Analysis App. This app scrapes (and never keeps or stores!) the tweets you want to classfiy and analyzes the sentiments as positive, negative or neutral and visualises their distribution.")
     st.markdown("**To begin, please enter the number of tweets you want to analyse.** 👇")
 
-	
     notweet = st.slider('Select a number between 1-100')
+    if notweet == 0:
+        notweet = 1
     st.write(notweet, 'tweets are being fetched.')
     st.write("__________________________________________________________________________________")
 
