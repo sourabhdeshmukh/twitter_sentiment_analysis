@@ -1,2 +1,233 @@
-# twitter_sentiment_analysis
-Twitter Sentiment Analysis Real Time.
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a name="readme-top"></a>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
+
+
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/sourabhdeshmukh/twitter_sentiment_analysis">
+    <img src="images/twitter.svg" alt="Logo" width="80" height="80">
+  </a>
+
+<h3 align="center">Twitter Sentiment Analysis</h3>
+
+  <p align="center">
+    The "Twitter Sentiment Analysis using NLP and Machine Learning" aims to harness the power of Natural Language Processing (NLP) and advanced machine learning techniques to accurately predict the sentiments of individuals expressed through Twitter handles or hashtags, while categorizing these sentiments as positive or negative.
+    <br />
+    <a href="https://github.com/sourabhdeshmukh/twitter_sentiment_analysis/blob/main/docs/Twitter_Sentiment_Analysis_report.pdf"><strong>Project Report »</strong></a>
+    <br />
+    <br />
+    <a href="https://twittersentimentpredictor.streamlit.app/">View Demo</a>
+    ·
+    <a href="https://github.com/sourabhdeshmukh/twitter_sentiment_analysis/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/sourabhdeshmukh/twitter_sentiment_analysis/issues">Request Feature</a>
+  </p>
+</div>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+The core objective of this project is to build a sophisticated sentiment analysis model that can effectively classify tweets as either positive or negative. By training the model on a diverse and comprehensive dataset of labeled tweets, the system will learn to identify linguistic patterns, contextual cues, and emotional expressions that signify positive or negative sentiments.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### Built With
+
+* [![Python][Python.org]][Python3-url]
+* [![Streamlit][Streamlit.io]][Streamlit-url]
+* [![Twitter][Twitter.com]][Twitter-url]
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+You can run this project local machine. This project is built on Ubuntu.
+
+### Prerequisites
+
+Before running this project on locl machine, you need to create project on the developer.twitter.com and generate the consumer keys, and access token required for the project to get the data from the twitter using API's.
+* [Twitter Developer URL](https://developer.twitter.com/en)
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/sourabhdeshmukh/twitter_sentiment_analysis.git
+
+2. Setup your python virtual environment
+   ```sh
+   python3 -m venv <env_name>
+   ``` 
+
+3. Activate your virtual environment
+   ```sh
+   source <env_name>/bin/activate
+   ```
+4. Copy the consumer and access keys in streamlit file and store it inside ~/.streamlit directory
+
+5. Install the python dependecies inside your virtual environment 
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+6. Run the project using below command.
+   ```sh
+   streamlit run app.py
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+1. **Business Insights:** This project's outcomes can be employed by businesses for brand monitoring, understanding customer feedback, and adjusting marketing strategies based on the sentiment trends.
+
+2. **Social Listening:** Governments and organizations can utilize the sentiment analysis to gauge public opinion on social and political issues.
+
+3. **Event Tracking:** Tracking sentiments related to specific events or campaigns can help organizations understand the overall impact and success of their initiatives.
+
+4. **User Experience Enhancement:** Online platforms can utilize sentiment analysis to identify and address user concerns promptly, enhancing user satisfaction.
+
+5. **Market Research:** Sentiment analysis can serve as a cost-effective method for conducting market research and gathering insights into consumer preferences.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [@100rabhdeshmukh](https://twitter.com/100rabhdeshmukh) - sourabh[dot]deshmukh[dot]988[at]gmail[dot]com
+
+Project Link: [https://github.com/sourabhdeshmukh/twitter_sentiment_analysis](https://github.com/sourabhdeshmukh/twitter_sentiment_analysis)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/sourabhdeshmukh/twitter_sentiment_analysis.svg?style=for-the-badge
+
+[contributors-url]: https://github.com/sourabhdeshmukh/twitter_sentiment_analysis/graphs/contributors
+
+[forks-shield]: https://img.shields.io/github/forks/sourabhdeshmukh/twitter_sentiment_analysis.svg?style=for-the-badge
+
+[forks-url]: https://github.com/sourabhdeshmukh/twitter_sentiment_analysis/network/members
+
+[stars-shield]: https://img.shields.io/github/stars/sourabhdeshmukh/twitter_sentiment_analysis.svg?style=for-the-badge
+
+[stars-url]: https://github.com/sourabhdeshmukh/twitter_sentiment_analysis/stargazers
+
+[issues-shield]: https://img.shields.io/github/issues/sourabhdeshmukh/twitter_sentiment_analysis.svg?style=for-the-badge
+
+[issues-url]: https://github.com/sourabhdeshmukh/twitter_sentiment_analysis/issues
+
+[license-shield]: https://img.shields.io/github/license/sourabhdeshmukh/twitter_sentiment_analysis.svg?style=for-the-badge
+
+[license-url]: https://github.com/sourabhdeshmukh/twitter_sentiment_analysis/blob/master/LICENSE.txt
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+
+[linkedin-url]: https://linkedin.com/in/sourabh-deshmukh
+[product-screenshot]: images/screenshot.png
+
+[Python.org]: https://img.shields.io/badge/Python-3-blue.svg?logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB2ZXJzaW9uPSIxLjAiCiAgIGlkPSJzdmcyIgogICBzb2RpcG9kaTp2ZXJzaW9uPSIwLjMyIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIxLjIuMSAoOWM2ZDQxZTQxMCwgMjAyMi0wNy0xNCkiCiAgIHNvZGlwb2RpOmRvY25hbWU9InB5dGhvbi1sb2dvLW9ubHkuc3ZnIgogICB3aWR0aD0iODMuMzcxMDE3cHQiCiAgIGhlaWdodD0iMTAxLjAwMTA4cHQiCiAgIGlua3NjYXBlOmV4cG9ydC1maWxlbmFtZT0icHl0aG9uLWxvZ28tb25seS5wbmciCiAgIGlua3NjYXBlOmV4cG9ydC14ZHBpPSIyMzIuNDQiCiAgIGlua3NjYXBlOmV4cG9ydC15ZHBpPSIyMzIuNDQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIj4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzNzEiPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSIyMDgwIgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTk3NiIKICAgICBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOnBhZ2VvcGFjaXR5PSIwLjAiCiAgICAgZ3VpZGV0b2xlcmFuY2U9IjEwLjAiCiAgICAgZ3JpZHRvbGVyYW5jZT0iMTAuMCIKICAgICBvYmplY3R0b2xlcmFuY2U9IjEwLjAiCiAgICAgYm9yZGVyb3BhY2l0eT0iMS4wIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIHBhZ2Vjb2xvcj0iI2ZmZmZmZiIKICAgICBpZD0iYmFzZSIKICAgICBpbmtzY2FwZTp6b29tPSIyLjE0NjE2NDIiCiAgICAgaW5rc2NhcGU6Y3g9IjkxLjU1ODY5OCIKICAgICBpbmtzY2FwZTpjeT0iNDcuOTkyNiIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iMTA5MiIKICAgICBpbmtzY2FwZTp3aW5kb3cteT0iNzIiCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ic3ZnMiIKICAgICB3aWR0aD0iMjEwbW0iCiAgICAgaGVpZ2h0PSI0MG1tIgogICAgIHVuaXRzPSJtbSIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIKICAgICBpbmtzY2FwZTpkb2N1bWVudC11bml0cz0icHQiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjAiIC8+CiAgPGRlZnMKICAgICBpZD0iZGVmczQiPgogICAgPGxpbmVhckdyYWRpZW50CiAgICAgICBpZD0ibGluZWFyR3JhZGllbnQyNzk1Ij4KICAgICAgPHN0b3AKICAgICAgICAgc3R5bGU9InN0b3AtY29sb3I6I2I4YjhiODtzdG9wLW9wYWNpdHk6MC40OTgwMzkyMjsiCiAgICAgICAgIG9mZnNldD0iMCIKICAgICAgICAgaWQ9InN0b3AyNzk3IiAvPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjojN2Y3ZjdmO3N0b3Atb3BhY2l0eTowOyIKICAgICAgICAgb2Zmc2V0PSIxIgogICAgICAgICBpZD0ic3RvcDI3OTkiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50CiAgICAgICBpZD0ibGluZWFyR3JhZGllbnQyNzg3Ij4KICAgICAgPHN0b3AKICAgICAgICAgc3R5bGU9InN0b3AtY29sb3I6IzdmN2Y3ZjtzdG9wLW9wYWNpdHk6MC41OyIKICAgICAgICAgb2Zmc2V0PSIwIgogICAgICAgICBpZD0ic3RvcDI3ODkiIC8+CiAgICAgIDxzdG9wCiAgICAgICAgIHN0eWxlPSJzdG9wLWNvbG9yOiM3ZjdmN2Y7c3RvcC1vcGFjaXR5OjA7IgogICAgICAgICBvZmZzZXQ9IjEiCiAgICAgICAgIGlkPSJzdG9wMjc5MSIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQKICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDM2NzYiPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjojYjJiMmIyO3N0b3Atb3BhY2l0eTowLjU7IgogICAgICAgICBvZmZzZXQ9IjAiCiAgICAgICAgIGlkPSJzdG9wMzY3OCIgLz4KICAgICAgPHN0b3AKICAgICAgICAgc3R5bGU9InN0b3AtY29sb3I6I2IzYjNiMztzdG9wLW9wYWNpdHk6MDsiCiAgICAgICAgIG9mZnNldD0iMSIKICAgICAgICAgaWQ9InN0b3AzNjgwIiAvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudAogICAgICAgaWQ9ImxpbmVhckdyYWRpZW50MzIzNiI+CiAgICAgIDxzdG9wCiAgICAgICAgIHN0eWxlPSJzdG9wLWNvbG9yOiNmNGY0ZjQ7c3RvcC1vcGFjaXR5OjEiCiAgICAgICAgIG9mZnNldD0iMCIKICAgICAgICAgaWQ9InN0b3AzMjQ0IiAvPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjp3aGl0ZTtzdG9wLW9wYWNpdHk6MSIKICAgICAgICAgb2Zmc2V0PSIxIgogICAgICAgICBpZD0ic3RvcDMyNDAiIC8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50CiAgICAgICBpZD0ibGluZWFyR3JhZGllbnQ0NjcxIj4KICAgICAgPHN0b3AKICAgICAgICAgc3R5bGU9InN0b3AtY29sb3I6I2ZmZDQzYjtzdG9wLW9wYWNpdHk6MTsiCiAgICAgICAgIG9mZnNldD0iMCIKICAgICAgICAgaWQ9InN0b3A0NjczIiAvPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjojZmZlODczO3N0b3Atb3BhY2l0eToxIgogICAgICAgICBvZmZzZXQ9IjEiCiAgICAgICAgIGlkPSJzdG9wNDY3NSIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQKICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDQ2ODkiPgogICAgICA8c3RvcAogICAgICAgICBzdHlsZT0ic3RvcC1jb2xvcjojNWE5ZmQ0O3N0b3Atb3BhY2l0eToxOyIKICAgICAgICAgb2Zmc2V0PSIwIgogICAgICAgICBpZD0ic3RvcDQ2OTEiIC8+CiAgICAgIDxzdG9wCiAgICAgICAgIHN0eWxlPSJzdG9wLWNvbG9yOiMzMDY5OTg7c3RvcC1vcGFjaXR5OjE7IgogICAgICAgICBvZmZzZXQ9IjEiCiAgICAgICAgIGlkPSJzdG9wNDY5MyIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQKICAgICAgIHgxPSIyMjQuMjM5OTYiCiAgICAgICB5MT0iMTQ0Ljc1NzE3IgogICAgICAgeDI9Ii02NS4zMDg1MDIiCiAgICAgICB5Mj0iMTQ0Ljc1NzE3IgogICAgICAgaWQ9ImxpbmVhckdyYWRpZW50Mjk4NyIKICAgICAgIHhsaW5rOmhyZWY9IiNsaW5lYXJHcmFkaWVudDQ2NzEiCiAgICAgICBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIKICAgICAgIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAwLjI3MDIsOTkuNjExMTYpIiAvPgogICAgPGxpbmVhckdyYWRpZW50CiAgICAgICB4MT0iMTcyLjk0MjA4IgogICAgICAgeTE9Ijc3LjQ3NTk4MyIKICAgICAgIHgyPSIyNi42NzAyOTgiCiAgICAgICB5Mj0iNzYuMzEzMTMzIgogICAgICAgaWQ9ImxpbmVhckdyYWRpZW50Mjk5MCIKICAgICAgIHhsaW5rOmhyZWY9IiNsaW5lYXJHcmFkaWVudDQ2ODkiCiAgICAgICBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIKICAgICAgIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAwLjI3MDIsOTkuNjExMTYpIiAvPgogICAgPGxpbmVhckdyYWRpZW50CiAgICAgICBpbmtzY2FwZTpjb2xsZWN0PSJhbHdheXMiCiAgICAgICB4bGluazpocmVmPSIjbGluZWFyR3JhZGllbnQ0Njg5IgogICAgICAgaWQ9ImxpbmVhckdyYWRpZW50MjU4NyIKICAgICAgIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIgogICAgICAgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgxMDAuMjcwMiw5OS42MTExNikiCiAgICAgICB4MT0iMTcyLjk0MjA4IgogICAgICAgeTE9Ijc3LjQ3NTk4MyIKICAgICAgIHgyPSIyNi42NzAyOTgiCiAgICAgICB5Mj0iNzYuMzEzMTMzIiAvPgogICAgPGxpbmVhckdyYWRpZW50CiAgICAgICBpbmtzY2FwZTpjb2xsZWN0PSJhbHdheXMiCiAgICAgICB4bGluazpocmVmPSIjbGluZWFyR3JhZGllbnQ0NjcxIgogICAgICAgaWQ9ImxpbmVhckdyYWRpZW50MjU4OSIKICAgICAgIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIgogICAgICAgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSgxMDAuMjcwMiw5OS42MTExNikiCiAgICAgICB4MT0iMjI0LjIzOTk2IgogICAgICAgeTE9IjE0NC43NTcxNyIKICAgICAgIHgyPSItNjUuMzA4NTAyIgogICAgICAgeTI9IjE0NC43NTcxNyIgLz4KICAgIDxsaW5lYXJHcmFkaWVudAogICAgICAgaW5rc2NhcGU6Y29sbGVjdD0iYWx3YXlzIgogICAgICAgeGxpbms6aHJlZj0iI2xpbmVhckdyYWRpZW50NDY4OSIKICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDIyNDgiCiAgICAgICBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIKICAgICAgIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAwLjI3MDIsOTkuNjExMTYpIgogICAgICAgeDE9IjE3Mi45NDIwOCIKICAgICAgIHkxPSI3Ny40NzU5ODMiCiAgICAgICB4Mj0iMjYuNjcwMjk4IgogICAgICAgeTI9Ijc2LjMxMzEzMyIgLz4KICAgIDxsaW5lYXJHcmFkaWVudAogICAgICAgaW5rc2NhcGU6Y29sbGVjdD0iYWx3YXlzIgogICAgICAgeGxpbms6aHJlZj0iI2xpbmVhckdyYWRpZW50NDY3MSIKICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDIyNTAiCiAgICAgICBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIKICAgICAgIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAwLjI3MDIsOTkuNjExMTYpIgogICAgICAgeDE9IjIyNC4yMzk5NiIKICAgICAgIHkxPSIxNDQuNzU3MTciCiAgICAgICB4Mj0iLTY1LjMwODUwMiIKICAgICAgIHkyPSIxNDQuNzU3MTciIC8+CiAgICA8bGluZWFyR3JhZGllbnQKICAgICAgIGlua3NjYXBlOmNvbGxlY3Q9ImFsd2F5cyIKICAgICAgIHhsaW5rOmhyZWY9IiNsaW5lYXJHcmFkaWVudDQ2NzEiCiAgICAgICBpZD0ibGluZWFyR3JhZGllbnQyMjU1IgogICAgICAgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiCiAgICAgICBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDAuNTYyNTQxLDAsMCwwLjU2Nzk3MiwtMTEuNTk3NCwtNy42MDk1NCkiCiAgICAgICB4MT0iMjI0LjIzOTk2IgogICAgICAgeTE9IjE0NC43NTcxNyIKICAgICAgIHgyPSItNjUuMzA4NTAyIgogICAgICAgeTI9IjE0NC43NTcxNyIgLz4KICAgIDxsaW5lYXJHcmFkaWVudAogICAgICAgaW5rc2NhcGU6Y29sbGVjdD0iYWx3YXlzIgogICAgICAgeGxpbms6aHJlZj0iI2xpbmVhckdyYWRpZW50NDY4OSIKICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDIyNTgiCiAgICAgICBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIKICAgICAgIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMC41NjI1NDEsMCwwLDAuNTY3OTcyLC0xMS41OTc0LC03LjYwOTU0KSIKICAgICAgIHgxPSIxNzIuOTQyMDgiCiAgICAgICB5MT0iNzYuMTc2MjI0IgogICAgICAgeDI9IjI2LjY3MDI5OCIKICAgICAgIHkyPSI3Ni4zMTMxMzMiIC8+CiAgICA8cmFkaWFsR3JhZGllbnQKICAgICAgIGlua3NjYXBlOmNvbGxlY3Q9ImFsd2F5cyIKICAgICAgIHhsaW5rOmhyZWY9IiNsaW5lYXJHcmFkaWVudDI3OTUiCiAgICAgICBpZD0icmFkaWFsR3JhZGllbnQyODAxIgogICAgICAgY3g9IjYxLjUxODg4MyIKICAgICAgIGN5PSIxMzIuMjg1NzUiCiAgICAgICBmeD0iNjEuNTE4ODgzIgogICAgICAgZnk9IjEzMi4yODU3NSIKICAgICAgIHI9IjI5LjAzNjkxMyIKICAgICAgIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsMC4xNzc5NjYsMCwxMDguNzQzNCkiCiAgICAgICBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgLz4KICAgIDxsaW5lYXJHcmFkaWVudAogICAgICAgaW5rc2NhcGU6Y29sbGVjdD0iYWx3YXlzIgogICAgICAgeGxpbms6aHJlZj0iI2xpbmVhckdyYWRpZW50NDY3MSIKICAgICAgIGlkPSJsaW5lYXJHcmFkaWVudDE0NzUiCiAgICAgICBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIKICAgICAgIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMC41NjI1NDEsMCwwLDAuNTY3OTcyLC0xNC45OTExMiwtMTEuNzAyMzcxKSIKICAgICAgIHgxPSIxNTAuOTYxMTEiCiAgICAgICB5MT0iMTkyLjM1MTc2IgogICAgICAgeDI9IjExMi4wMzE0NCIKICAgICAgIHkyPSIxMzcuMjcyOTkiIC8+CiAgICA8bGluZWFyR3JhZGllbnQKICAgICAgIGlua3NjYXBlOmNvbGxlY3Q9ImFsd2F5cyIKICAgICAgIHhsaW5rOmhyZWY9IiNsaW5lYXJHcmFkaWVudDQ2ODkiCiAgICAgICBpZD0ibGluZWFyR3JhZGllbnQxNDc4IgogICAgICAgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiCiAgICAgICBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDAuNTYyNTQxLDAsMCwwLjU2Nzk3MiwtMTQuOTkxMTIsLTExLjcwMjM3MSkiCiAgICAgICB4MT0iMjYuNjQ4OTM3IgogICAgICAgeTE9IjIwLjYwMzc4MSIKICAgICAgIHgyPSIxMzUuNjY1MjUiCiAgICAgICB5Mj0iMTE0LjM5NzY3IiAvPgogICAgPHJhZGlhbEdyYWRpZW50CiAgICAgICBpbmtzY2FwZTpjb2xsZWN0PSJhbHdheXMiCiAgICAgICB4bGluazpocmVmPSIjbGluZWFyR3JhZGllbnQyNzk1IgogICAgICAgaWQ9InJhZGlhbEdyYWRpZW50MTQ4MCIKICAgICAgIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIgogICAgICAgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgxLjc0OTA1NjVlLTgsLTAuMjM5OTQ2OTYsMS4wNTQ2NjgsMy43OTE1NDU3ZS03LC04My43MDA4LDE0Mi40NjIwMSkiCiAgICAgICBjeD0iNjEuNTE4ODgzIgogICAgICAgY3k9IjEzMi4yODU3NSIKICAgICAgIGZ4PSI2MS41MTg4ODMiCiAgICAgICBmeT0iMTMyLjI4NTc1IgogICAgICAgcj0iMjkuMDM2OTEzIiAvPgogIDwvZGVmcz4KICA8cGF0aAogICAgIHN0eWxlPSJmaWxsOnVybCgjbGluZWFyR3JhZGllbnQxNDc4KTtmaWxsLW9wYWNpdHk6MSIKICAgICBkPSJNIDU0LjkxODc4NSw5LjE5Mjc0MjFlLTQgQyA1MC4zMzUxMzIsMC4wMjIyMTcyNyA0NS45NTc4NDYsMC40MTMxMzY5NyA0Mi4xMDYyODUsMS4wOTQ2NjkzIDMwLjc2MDA2OSwzLjA5OTE3MzEgMjguNzAwMDM2LDcuMjk0NzcxNCAyOC43MDAwMzUsMTUuMDMyMTY5IHYgMTAuMjE4NzUgaCAyNi44MTI1IHYgMy40MDYyNSBoIC0yNi44MTI1IC0xMC4wNjI1IGMgLTcuNzkyNDU5LDAgLTE0LjYxNTc1ODgsNC42ODM3MTcgLTE2Ljc0OTk5OTgsMTMuNTkzNzUgLTIuNDYxODE5OTgsMTAuMjEyOTY2IC0yLjU3MTAxNTA4LDE2LjU4NjAyMyAwLDI3LjI1IDEuOTA1OTI4Myw3LjkzNzg1MiA2LjQ1NzU0MzIsMTMuNTkzNzQ4IDE0LjI0OTk5OTgsMTMuNTkzNzUgaCA5LjIxODc1IHYgLTEyLjI1IGMgMCwtOC44NDk5MDIgNy42NTcxNDQsLTE2LjY1NjI0OCAxNi43NSwtMTYuNjU2MjUgaCAyNi43ODEyNSBjIDcuNDU0OTUxLDAgMTMuNDA2MjUzLC02LjEzODE2NCAxMy40MDYyNSwtMTMuNjI1IHYgLTI1LjUzMTI1IGMgMCwtNy4yNjYzMzg2IC02LjEyOTk4LC0xMi43MjQ3NzcxIC0xMy40MDYyNSwtMTMuOTM3NDk5NyBDIDY0LjI4MTU0OCwwLjMyNzk0Mzk3IDU5LjUwMjQzOCwtMC4wMjAzNzkwMyA1NC45MTg3ODUsOS4xOTI3NDIxZS00IFogbSAtMTQuNSw4LjIxODc1MDEyNTc5IGMgMi43Njk1NDcsMCA1LjAzMTI1LDIuMjk4NjQ1NiA1LjAzMTI1LDUuMTI0OTk5NiAtMmUtNiwyLjgxNjMzNiAtMi4yNjE3MDMsNS4wOTM3NSAtNS4wMzEyNSw1LjA5Mzc1IC0yLjc3OTQ3NiwtMWUtNiAtNS4wMzEyNSwtMi4yNzc0MTUgLTUuMDMxMjUsLTUuMDkzNzUgLTEwZS03LC0yLjgyNjM1MyAyLjI1MTc3NCwtNS4xMjQ5OTk2IDUuMDMxMjUsLTUuMTI0OTk5NiB6IgogICAgIGlkPSJwYXRoMTk0OCIgLz4KICA8cGF0aAogICAgIHN0eWxlPSJmaWxsOnVybCgjbGluZWFyR3JhZGllbnQxNDc1KTtmaWxsLW9wYWNpdHk6MSIKICAgICBkPSJtIDg1LjYzNzUzNSwyOC42NTcxNjkgdiAxMS45MDYyNSBjIDAsOS4yMzA3NTUgLTcuODI1ODk1LDE2Ljk5OTk5OSAtMTYuNzUsMTcgaCAtMjYuNzgxMjUgYyAtNy4zMzU4MzMsMCAtMTMuNDA2MjQ5LDYuMjc4NDgzIC0xMy40MDYyNSwxMy42MjUgdiAyNS41MzEyNDcgYyAwLDcuMjY2MzQ0IDYuMzE4NTg4LDExLjU0MDMyNCAxMy40MDYyNSwxMy42MjUwMDQgOC40ODczMzEsMi40OTU2MSAxNi42MjYyMzcsMi45NDY2MyAyNi43ODEyNSwwIDYuNzUwMTU1LC0xLjk1NDM5IDEzLjQwNjI1MywtNS44ODc2MSAxMy40MDYyNSwtMTMuNjI1MDA0IFYgODYuNTAwOTE5IGggLTI2Ljc4MTI1IHYgLTMuNDA2MjUgaCAyNi43ODEyNSAxMy40MDYyNTQgYyA3Ljc5MjQ2MSwwIDEwLjY5NjI1MSwtNS40MzU0MDggMTMuNDA2MjQxLC0xMy41OTM3NSAyLjc5OTMzLC04LjM5ODg4NiAyLjY4MDIyLC0xNi40NzU3NzYgMCwtMjcuMjUgLTEuOTI1NzgsLTcuNzU3NDQxIC01LjYwMzg3LC0xMy41OTM3NSAtMTMuNDA2MjQxLC0xMy41OTM3NSB6IG0gLTE1LjA2MjUsNjQuNjU2MjUgYyAyLjc3OTQ3OCwzZS02IDUuMDMxMjUsMi4yNzc0MTcgNS4wMzEyNSw1LjA5Mzc0NyAtMmUtNiwyLjgyNjM1NCAtMi4yNTE3NzUsNS4xMjUwMDQgLTUuMDMxMjUsNS4xMjUwMDQgLTIuNzY5NTUsMCAtNS4wMzEyNSwtMi4yOTg2NSAtNS4wMzEyNSwtNS4xMjUwMDQgMmUtNiwtMi44MTYzMyAyLjI2MTY5NywtNS4wOTM3NDcgNS4wMzEyNSwtNS4wOTM3NDcgeiIKICAgICBpZD0icGF0aDE5NTAiIC8+CiAgPGVsbGlwc2UKICAgICBzdHlsZT0ib3BhY2l0eTowLjQ0MzgyO2ZpbGw6dXJsKCNyYWRpYWxHcmFkaWVudDE0ODApO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDoxNS40MTc0O3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgaWQ9InBhdGgxODk0IgogICAgIGN4PSI1NS44MTY3NjEiCiAgICAgY3k9IjEyNy43MDA3OSIKICAgICByeD0iMzUuOTMwOTc3IgogICAgIHJ5PSI2Ljk2NzMxMTkiIC8+Cjwvc3ZnPgo=
+[Python3-url]: https://www.python.org/
+
+[Streamlit.io]: https://img.shields.io/badge/Streamlit--blue.svg?logo=data:image/svg%2bxml;base64,PHN2ZyB3aWR0aD0iMzAxIiBoZWlnaHQ9IjE2NSIgdmlld0JveD0iMCAwIDMwMSAxNjUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xNTAuNzMxIDEwMS41NDdMOTguMTM4NyA3My43NDcxTDYuODQ2NzQgMjUuNDk2OUM2Ljc2MzQgMjUuNDEzNiA2LjU5Njc0IDI1LjQxMzYgNi41MTM0MSAyNS40MTM2QzMuMTgwMDcgMjMuODMwMyAtMC4yMzY2MDggMjcuMTYzNiAxLjAxMzQgMzAuNDk3TDQ3LjUzMDIgMTQ5LjEzOUw0Ny41Mzg1IDE0OS4xNjRDNDcuNTg4NSAxNDkuMjgxIDQ3LjYzMDIgMTQ5LjM5NyA0Ny42ODAyIDE0OS41MTRDNDkuNTg4NSAxNTMuOTM5IDUzLjc1NTIgMTU2LjY3MiA1OC4yODg2IDE1Ny43NDdDNTguNjcxOSAxNTcuODMxIDU4Ljk0NjEgMTU3LjkwNiA1OS40MDY0IDE1Ny45OThDNTkuODY0NSAxNTguMSA2MC41MDUyIDE1OC4yMzkgNjEuMDU1MiAxNTguMjgxQzYxLjE0NjkgMTU4LjI4OSA2MS4yMzAyIDE1OC4yODkgNjEuMzIxOSAxNTguMjk3SDYxLjM4ODZDNjEuNDU1MiAxNTguMzA2IDYxLjUyMTkgMTU4LjMwNiA2MS41ODg2IDE1OC4zMTRINjEuNjgwMkM2MS43Mzg2IDE1OC4zMjIgNjEuODA1MiAxNTguMzIyIDYxLjg2MzYgMTU4LjMyMkg2MS45NzE5QzYyLjAzODYgMTU4LjMzMSA2Mi4xMDUyIDE1OC4zMzEgNjIuMTcxOSAxNTguMzMxVjE1OC4zMzFDMTIxLjA4NCAxNjQuNzU0IDE4MC41MTkgMTY0Ljc1NCAyMzkuNDMxIDE1OC4zMzFWMTU4LjMzMUMyNDAuMTM5IDE1OC4zMzEgMjQwLjgzMSAxNTguMjk3IDI0MS40OTcgMTU4LjIzMUMyNDEuNzE0IDE1OC4yMDYgMjQxLjkyMiAxNTguMTgxIDI0Mi4xMzEgMTU4LjE1NkMyNDIuMTU2IDE1OC4xNDcgMjQyLjE4OSAxNTguMTQ3IDI0Mi4yMTQgMTU4LjEzOUMyNDIuMzU2IDE1OC4xMjIgMjQyLjQ5NyAxNTguMDk3IDI0Mi42MzkgMTU4LjA3MkMyNDIuODQ3IDE1OC4wNDcgMjQzLjA1NiAxNTguMDA2IDI0My4yNjQgMTU3Ljk2NEMyNDMuNjgxIDE1Ny44NzIgMjQzLjg3IDE1Ny44MDYgMjQ0LjQzNiAxNTcuNjExQzI0NS4wMDEgMTU3LjQxNyAyNDUuOTQgMTU3LjA3NyAyNDYuNTI3IDE1Ni43OTRDMjQ3LjExNSAxNTYuNTExIDI0Ny41MjIgMTU2LjIzOSAyNDguMDE0IDE1NS45MzFDMjQ4LjYyMiAxNTUuNTQ3IDI0OS4yMDEgMTU1LjE1NSAyNDkuNzg4IDE1NC43MTVDMjUwLjA0MSAxNTQuNTIxIDI1MC4yMTQgMTU0LjM5NyAyNTAuMzk3IDE1NC4yMjJMMjUwLjI5NyAxNTQuMTY0TDE1MC43MzEgMTAxLjU0N1oiIGZpbGw9IiNGRjRCNEIiLz4KPHBhdGggZD0iTTI5NC43NjYgMjUuNDk4MUgyOTQuNjgzTDIwMy4zNTcgNzMuNzQ4M0wyNTQuMTI0IDE0OS4zNTdMMzAwLjUyNCAzMC40OTgxVjMwLjMzMTVDMzAxLjY5MSAyNi44MzE0IDI5OC4xMDggMjMuNjY0OCAyOTQuNzY2IDI1LjQ5ODEiIGZpbGw9IiM3RDM1M0IiLz4KPHBhdGggZD0iTTE1NS41OTggMi41NTU3MkMxNTMuMjY0IC0wLjg1MjYyNCAxNDguMTgxIC0wLjg1MjYyNCAxNDUuOTMxIDIuNTU1NzJMOTguMTM4OSA3My43NDc3TDE1MC43MzEgMTAxLjU0OEwyNTAuMzk4IDE1NC4yMjJDMjUxLjAyNCAxNTMuNjA5IDI1MS41MjYgMTUzLjAxMiAyNTIuMDU2IDE1Mi4zODFDMjUyLjgwNiAxNTEuNDU2IDI1My41MDYgMTUwLjQ2NSAyNTQuMTIzIDE0OS4zNTZMMjAzLjM1NiA3My43NDc3TDE1NS41OTggMi41NTU3MloiIGZpbGw9IiNCRDQwNDMiLz4KPC9zdmc+Cg==
+[Streamlit-url]: https://streamlit.io/
+
+[Twitter.com]: https://img.shields.io/badge/TwitterAPI-v1.1-blue.svg?logo=data:image/svg%2bxml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbDpzcGFjZT0icHJlc2VydmUiIHZpZXdCb3g9IjAgMCAyNDggMjA0Ij4KICA8cGF0aCBmaWxsPSIjMWQ5YmYwIiBkPSJNMjIxLjk1IDUxLjI5Yy4xNSAyLjE3LjE1IDQuMzQuMTUgNi41MyAwIDY2LjczLTUwLjggMTQzLjY5LTE0My42OSAxNDMuNjl2LS4wNGMtMjcuNDQuMDQtNTQuMzEtNy44Mi03Ny40MS0yMi42NCAzLjk5LjQ4IDggLjcyIDEyLjAyLjczIDIyLjc0LjAyIDQ0LjgzLTcuNjEgNjIuNzItMjEuNjYtMjEuNjEtLjQxLTQwLjU2LTE0LjUtNDcuMTgtMzUuMDcgNy41NyAxLjQ2IDE1LjM3IDEuMTYgMjIuOC0uODctMjMuNTYtNC43Ni00MC41MS0yNS40Ni00MC41MS00OS41di0uNjRjNy4wMiAzLjkxIDE0Ljg4IDYuMDggMjIuOTIgNi4zMkMxMS41OCA2My4zMSA0Ljc0IDMzLjc5IDE4LjE0IDEwLjcxYzI1LjY0IDMxLjU1IDYzLjQ3IDUwLjczIDEwNC4wOCA1Mi43Ni00LjA3LTE3LjU0IDEuNDktMzUuOTIgMTQuNjEtNDguMjUgMjAuMzQtMTkuMTIgNTIuMzMtMTguMTQgNzEuNDUgMi4xOSAxMS4zMS0yLjIzIDIyLjE1LTYuMzggMzIuMDctMTIuMjYtMy43NyAxMS42OS0xMS42NiAyMS42Mi0yMi4yIDI3LjkzIDEwLjAxLTEuMTggMTkuNzktMy44NiAyOS03Ljk1LTYuNzggMTAuMTYtMTUuMzIgMTkuMDEtMjUuMiAyNi4xNnoiLz4KPC9zdmc+
+[Twitter-url]: https://twitter.com/
